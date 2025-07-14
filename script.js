@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const signInBtn = document.querySelector(".btn-signin");
   const subscribeBtn = document.querySelector(".btn-subscribe");

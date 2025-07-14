@@ -7,24 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .icon-box {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .icon-box i {
-      font-size: 24px;
-    }
-  </style>
 </head>
 <body>
-    <nav class="navbar">
+  <nav class="navbar">
     <div class="logo-section">
       <div class="menu-icon" id="menu-icon">&#9776;</div>
       <div class="logo">
@@ -32,28 +17,30 @@
       </div>
     </div>
     <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search articles, topics..." />
-    <button><span>&#128269;</span></button>
-  </div>
+      <input type="text" id="searchInput" placeholder="Search articles, topics..." />
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
     <div class="actions">
       <a href="#" class="btn btn-signin">Sign In</a>
       <a href="#" class="btn btn-subscribe">Subscribe</a>
     </div>
   </nav>
+
   <div class="dropdown-menu" id="dropdown">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li>How to Growth Strategies </li>
+      <li><a href="GrowthStrategies.html" id="GrowthStrategies-link">How to Growth Strategies</a></li>
       <li>The Business Journal</li>
       <li>Industry Topics</li>
       <li>Career & Workplace</li>
       <li>Food & Lifestyle</li>
-      <li>Health Care</li>
+      <li><a href="healthcare.html" id="healthcare-link">Healthcare</a></li>
       <li>Professional Services</li>
       <li>Banking and financial services</li>
       <li><a href="blueprint.html" id="blueprint-link">Blueprint</a></li>
     </ul>
   </div>
+
   <!-- Blueprint Section -->
   <section class="py-5 bg-light">
     <div class="container">
@@ -63,135 +50,172 @@
           <img src="https://cdn.shopify.com/s/files/1/1950/1891/files/Lunge_reach_600x600.jpg?v=1665377211" class="img-fluid rounded shadow" alt="Blueprint">
         </div>
         <div class="col-md-6">
-          <div class="icon-box" data-aos="fade-left" data-aos-delay="100">
-            <i class="text-primary bi bi-chat-dots-fill"></i>
-            <div>
-              <h5 class="fw-semibold mb-1"> Fitness Assessment & Goal Setting</h5>
-              <p class="text-muted">“Understanding your current fitness level and setting realistic short and long-term goals is the first step to transformation.”</p>
-              <p class="text-muted">“अपने मौजूदा फिटनेस स्तर को समझना और व्यावहारिक छोटे व लंबे समय के लक्ष्य तय करना, परिवर्तन की पहली सीढ़ी है।”</p>
-            </div>
-          </div>
-          <div class="icon-box" data-aos="fade-left" data-aos-delay="200">
-            <i class="text-success bi bi-geo-alt-fill"></i>
-            <div>
-              <h5 class="fw-semibold mb-1"> Personalized Workout Planning</h5>
-              <p class="text-muted"> “Every body is different — so your workouts should be customized. Strength, cardio, mobility — all planned according to your unique goals.”</p>
-              <p class="text-muted">  “हर शरीर अलग होता है — इसलिए वर्कआउट भी आपके लक्ष्य के अनुसार ही होना चाहिए। ताकत, कार्डियो, मूवमेंट — सब कुछ खास आपके लिए प्लान किया जाता है।”</p>
-            </div>
-          </div>
-          <div class="icon-box" data-aos="fade-left" data-aos-delay="300">
-            <i class="text-danger bi bi-file-earmark-text-fill"></i>
-            <div>
-              <h5 class="fw-semibold mb-1">Mindset & Motivation</h5>
-              <p class="text-muted">“Staying consistent is the hardest part — that’s why building a strong mindset and daily habits is part of the fitness blueprint.”</p>
-              <p class="text-muted">“लगातार बने रहना सबसे मुश्किल होता है — इसलिए मजबूत सोच और रोज़मर्रा की आदतें बनाना भी फिटनेस ब्लूप्रिंट का हिस्सा है।”
-             </p>
-            </div>
-          </div>
-          <div class="icon-box" data-aos="fade-left" data-aos-delay="400">
-            <i class="text-info bi bi-key-fill"></i>
-            <div>
-              <h5 class="fw-semibold mb-1">Tracking Progress & Optimization</h5>
-              <p class="text-muted">“Regularly track your progress to know what’s working and what’s not. Weekly check-ins, strength logs, and body measurements help refine your plan.”</p>
-               <p class="text-muted">“अपनी प्रगति को नियमित रूप से ट्रैक करें ताकि पता चले क्या असर कर रहा है और क्या नहीं। साप्ताहिक चेक-इन, ताकत के रिकॉर्ड और शरीर के नाप से योजना बेहतर बनती है।”</p>
-            </div>
-          </div>
+          <ol class="text-muted ps-3" data-aos="fade-left">
+            <li class="mb-4">
+              <h5 class="fw-semibold">Fitness Assessment & Goal Setting</h5>
+              <p>“Understanding your current fitness level and setting realistic short and long-term goals is the first step to transformation.”</p>
+              <p>“अपने मौजूदा फिटनेस स्तर को समझना और व्यावहारिक छोटे व लंबे समय के लक्ष्य तय करना, परिवर्तन की पहली सीढ़ी है।”</p>
+            </li>
+            <li class="mb-4">
+              <h5 class="fw-semibold">Personalized Workout Planning</h5>
+              <p>“Every body is different — so your workouts should be customized. Strength, cardio, mobility — all planned according to your unique goals.”</p>
+              <p>“हर शरीर अलग होता है — इसलिए वर्कआउट भी आपके लक्ष्य के अनुसार ही होना चाहिए। ताकत, कार्डियो, मूवमेंट — सब कुछ खास आपके लिए प्लान किया जाता है।”</p>
+            </li>
+            <li class="mb-4">
+              <h5 class="fw-semibold">Mindset & Motivation</h5>
+              <p>“Staying consistent is the hardest part — that’s why building a strong mindset and daily habits is part of the fitness blueprint.”</p>
+              <p>“लगातार बने रहना सबसे मुश्किल होता है — इसलिए मजबूत सोच और रोज़मर्रा की आदतें बनाना भी फिटनेस ब्लूप्रिंट का हिस्सा है।”</p>
+            </li>
+            <li class="mb-4">
+              <h5 class="fw-semibold">Tracking Progress & Optimization</h5>
+              <p>“Regularly track your progress to know what’s working and what’s not. Weekly check-ins, strength logs, and body measurements help refine your plan.”</p>
+              <p>“अपनी प्रगति को नियमित रूप से ट्रैक करें ताकि पता चले क्या असर कर रहा है और क्या नहीं। साप्ताहिक चेक-इन, ताकत के रिकॉर्ड और शरीर के नाप से योजना बेहतर बनती है।”</p>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Process -->
+  <!-- My Fitness Story Section -->
   <section class="py-5 bg-white">
     <div class="container">
       <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Fitness Story</h2>
       <div class="row align-items-center">
         <div class="col-md-6" data-aos="fade-right">
-          <ul class="text-muted">
-            <li> I have a very long experience in this of almost 40 years I believe that if we are happy and healthy in our life then life will become very easy, </li>
-            <li>we will enjoy life a lot but if you have health problems then life becomes a bit difficult for you, </li>
-            <li>hat is why everyone should take care of their health in their life the best way to take care of health is to exercise, stay fit, eat healthy things yes</li>
-            <li>my name is Rishabbajaj the thing that I have paid most attention to in my life till now is to staying fit and staying fit In our view, </li>
+          <ol class="text-muted">
+            <li>I have a very long experience in this of almost 40 years I believe that if we are happy and healthy in our life then life will become very easy,</li>
+            <li>we will enjoy life a lot but if you have health problems then life becomes a bit difficult for you,</li>
             <li>following the method and exercising should be the first task of life. </li>
-            <li>his is very important for everyone to stay healthy, but we can only give advice to someone on how to achieve growth and health in their life.</li>
-          </ul>
+            <li>what is why everyone should take care of their health in their life the best way to take care of health is to exercise, stay fit, eat healthy things yes</li>
+            <li>My name is Rishabbajaj and I focus on staying fit</li>
+            <li>my name is Rishabbajaj the thing that I have paid most attention to in my life till now is to staying fit and staying fit In our view,</li>
+            <li>This is very important for everyone to stay healthy</li>
+            <li>his is very important for everyone to stay healthy, but we can only give advice to someone on how to achieve growth and health in their life</li>
+          </ol>
         </div>
         <div class="col-md-6" data-aos="fade-left">
           <div class="ratio ratio-16x9 rounded shadow overflow-hidden" style="height: 350px;">
-            <img src="https://static.sadhguru.org/d/46272/1633190518-1633190517599.jpg"  alt="Sadhguru Image"
-             style="width: 100%; height: 100%; object-fit: cover;" />
-           </div>
+            <img src="https://static.sadhguru.org/d/46272/1633190518-1633190517599.jpg" alt="Sadhguru Image" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
         </div>
       </div>
     </div>
   </section>
-      <!-- Mindful Living in the 21st Century Section -->
-<section class="py-5 bg-dark text-white" id="mindful-living">
+  
+<!-- My Mission: Deep Research for Life Extension -->
+<section class="py-5 bg-light" id="lifespan-research">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Mindful Living in the 21st Century</h2>
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Mission: Lifespan Extension Through Science & Soul</h2>
     <div class="row gy-4">
+      <!-- Card 1 -->
       <div class="col-md-6" data-aos="fade-right">
-        <img src="https://www.journee-mondiale.com/en/wp-content/uploads/2024/10/msg_01WAvRdBHdsbyP3aYCXxM265.webp" class="img-fluid rounded shadow" alt="Mindful Living">
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">🔬 Researching to Extend Human Life</h5>
+          <p>I'm trying to increase someone's lifespan as much as possible. For this, I’m taking help of science, doing research, and meeting doctors.</p>
+          <p class="text-muted">मैं किसी व्यक्ति की आयु को जितना संभव हो सके बढ़ाने की कोशिश कर रहा हूँ। इसके लिए मैं विज्ञान का सहारा ले रहा हूँ, रिसर्च कर रहा हूँ, डॉक्टरों से मिल रहा हूँ।</p>
+        </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="col-md-6" data-aos="fade-left">
-        <ul class="mindful-points">
-         <ul>
-  <li>
-    <h5>1. Shift Your Mindset</h5>
-    <p>
-      <strong>EN:</strong> Living long and well begins with changing how we think about life, health, and aging.<br/>
-      <strong>HI:</strong> लंबा और अच्छा जीवन जीने की शुरुआत हमारे सोच को बदलने से होती है।
-    </p>
-  </li>
-  <li>
-    <h5>2. Listen to Your Body</h5>
-    <p>
-      <strong>EN:</strong> Our body signals what it needs — we just need to start listening and responding.<br/>
-      <strong>HI:</strong> हमारा शरीर हमें बताता है कि उसे क्या चाहिए — बस सुनने और समझने की ज़रूरत है।
-    </p>
-  </li>
-  <li>
-    <h5>3. Eat with Awareness</h5>
-    <p>
-      <strong>EN:</strong> Unconscious eating causes inner chaos. Conscious eating brings clarity and healing.<br/>
-      <strong>HI:</strong> बिना सोचे समझे खाना हमारे अंदर गड़बड़ी लाता है। सोच-समझकर खाना शांति और सेहत लाता है।
-    </p>
-  </li>
-  <li>
-    <h5>4. Respect Every Part of Your Body</h5>
-    <p>
-      <strong>EN:</strong> From bones to heart to brain — know what each part needs and nourish it accordingly.Focus on how to live meaningfully, not on how to avoid death.<br/>
-      <strong>HI:</strong> हड्डियों से लेकर दिल और दिमाग तक — हर हिस्से को जानें और वैसा पोषण दें। मृत्यु से डरने के बजाय जीने की योजना बनाएं।
-    </p>
-  </li>
-  <li>
-   
-    <h5>5. Stop Normalizing Aging</h5>
-    <p>
-      <strong>EN:</strong> We must rethink aging in the 21st century — how to stop old age from controlling our future.<br/>
-      <strong>HI:</strong> हमें 21वीं सदी में बुढ़ापे को सामान्य मानने की सोच बदलनी होगी — यह न सोचें कि उम्र बढ़ना रुक नहीं सकता।
-    </p>
-  </li>
-  <li>
-    <h5>6. Fitness Is Known, Mind Is Ignored</h5>
-    <p>
-      <strong>EN:</strong> Everyone knows how to stay fit through diet and exercise, but we often ignore transforming the mind.<br/>
-      <strong>HI:</strong> फिट रहने के लिए एक्सरसाइज़ और डाइट सबको पता है, लेकिन मन को बदलना सबसे ज़रूरी है जिसे हम भूल जाते हैं।
-    </p>
-  </li>
-  <li>
-    <h5>7. Know What Your Body Truly Needs</h5>
-    <p>
-      <strong>EN:</strong> We rarely try to understand what our bones, heart, or brain need — but awareness of this is life-changing. Life becomes truly joyful when we eat, move, and think in tune with what our body and mind need.<br/>
-      <strong>HI:</strong> हम शायद ही कभी यह समझते हैं कि शरीर के अलग-अलग हिस्सों को क्या चाहिए — लेकिन यही समझ जीवन बदल सकती है। जब हम अपने शरीर और मन की ज़रूरतों के अनुसार जीते हैं, तभी जीवन में असली आनंद आता है।
-    </p>
-  </li>
-  <li>
-</ul>
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">🧘‍♂️ Integrating Traditional & Modern Wellness</h5>
+          <p>I'm meeting yoga creators, exploring indigenous treatments, and researching Ayurveda along with modern science.</p>
+          <p class="text-muted">मैं योग के सर्जकों से मिल रहा हूँ, यदि कोई देशी या आयुर्वेदिक उपचार है तो उस पर भी शोध कर रहा हूँ।</p>
+        </div>
       </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">👥 Collaboration & Team Research</h5>
+          <p>Whoever wants to discuss with us will be researched deeply by our team and doctors through multiple approaches.</p>
+          <p class="text-muted">जो भी हमसे संपर्क करता है, उन सभी पर हमारी टीम और डॉक्टर अलग-अलग तरीकों से रिसर्च करेंगे।</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">🏋️‍♀️ Holistic Fitness Tools</h5>
+          <p>For growth: meditation, yoga, running, dancing, gym, and even farming field exercises — it depends on what suits whom.</p>
+          <p class="text-muted">व्यक्तिगत विकास के लिए ध्यान, योग, दौड़, नृत्य, जिम, खेतों में एक्सरसाइज — यह सब इस पर निर्भर करता है कि किसको क्या सूट करता है।</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">🤝 Learning from Legends</h5>
+          <p>I met Bhishan Singh Bedi, a legendary cricketer. I worked with him for 2 years in Chahal near Shimla as a physical trainer. Learned so much.</p>
+          <p class="text-muted">मैंने बिशन सिंह बेदी जैसे दिग्गजों से मुलाकात की। शिमला के पास चाहल में उनके साथ 2 साल फिजिकल ट्रेनर के रूप में काम किया, बहुत कुछ सीखने को मिला।</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="p-4 rounded shadow bg-white h-100">
+          <h5 class="fw-bold">🔁 Continuous Ground-Level Fitness Research</h5>
+          <p>This is not just theory. I’ve done deep fitness research, met many people, and experienced real-world learning from the grassroots.</p>
+          <p class="text-muted">यह सिर्फ थ्योरी नहीं है — मैंने ज़मीनी स्तर पर रिसर्च की है, कई लोगों से मिला हूँ और असली अनुभव से सीखा है।</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+  <!-- Mindful Living in the 21st Century Section -->
+  <section class="py-5 bg-dark text-white" id="mindful-living">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Mindful Living in the 21st Century</h2>
+      <div class="row gy-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <img src="https://www.journee-mondiale.com/en/wp-content/uploads/2024/10/msg_01WAvRdBHdsbyP3aYCXxM265.webp" class="img-fluid rounded shadow mb-3" style="height:700px; object-fit:cover;"alt="Mindful Living">
+      
+        <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/healthy-eating-ingredients-732x549-thumbnail.jpg" class="img-fluid rounded shadow mb-3" style="height:700px; object-fit:cover;" alt="Healthy Food">
+        
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <ul class="mindful-points">
+            <li><h5>1. Shift Your Mindset</h5>
+            <p> Living long and well begins with changing how we think about life, health, and aging.<br/>
+            लंबा और अच्छा जीवन जीने की शुरुआत हमारे सोच को बदलने से होती है। </p></li>
+            <li><h5>2. Listen to Your Body</h5>
+            <p> Our body signals what it needs — we just need to start listening and responding. Unconscious eating causes inner chaos. Conscious eating brings clarity and healing.<br/>
+           हमारा शरीर हमें बताता है कि उसे क्या चाहिए — बस सुनने और समझने की ज़रूरत है।  बिना सोचे समझे खाना हमारे अंदर गड़बड़ी लाता है। सोच-समझकर खाना शांति और सेहत लाता है। </p></li>
+             <li><h5>3. Preventive Health: A Plan Before Sickness Begins</h5>
+            <p> whenever someone falls sick or his health deteriorates, everyone tries to cure him, the doctor takes him to the hospital, he is taken to the best doctor and treated, but if all these are not required then why not, something should be saved before the person falls sick, we have a plan for this too<br/>
+           जब कोई बीमार पड़ता है या उसकी तबीयत बिगड़ती है, तो हर कोई उसे ठीक करने की कोशिश करता है। डॉक्टर उसे अस्पताल ले जाते हैं, उसे सबसे अच्छे डॉक्टर से दिखाया जाता है और इलाज किया जाता है।
+            लेकिन अगर ये सब कुछ करने की ज़रूरत ही न पड़े, तो क्यों न पहले ही कुछ ऐसा किया जाए जिससे व्यक्ति बीमार ही न हो?
+           हमारे पास इसके लिए भी एक योजना है। </p></li>
+             
+            <li><h5>4. Respect Every Part of Your Body</h5>
+              <p> From bones to heart to brain — know what each part needs and nourish it accordingly.Focus on how to live meaningfully, not on how to avoid death.<br/>
+              हड्डियों से लेकर दिल और दिमाग तक — हर हिस्से को जानें और वैसा पोषण दें। मृत्यु से डरने के बजाय जीने की योजना बनाएं।
+             </p></li>
+            <li><h5>5. Stop Normalizing Aging</h5>
+             <p> We must rethink aging in the 21st century — how to stop old age from controlling our future.<br/>
+            हमें 21वीं सदी में बुढ़ापे को सामान्य मानने की सोच बदलनी होगी — यह न सोचें कि उम्र बढ़ना रुक नहीं सकता।
+             </p></li>
+            <li><h5>6. Real Fitness Starts from Within: Mindset & Gut First</h5>
+             <p> Everyone knows about exercise and diet to stay fit, but what’s truly essential is transforming the mind — and that’s what we often forget.
+             As humans, we've even walked on the moon, but rarely do we think about our gut — the root of countless diseases.
+             We talk proudly about reaching the moon, yet we ignore the stomach — the very core of our health.<br/>
+            फिट रहने के लिए एक्सरसाइज़ और डाइट के बारे में तो सब जानते हैं, लेकिन सबसे ज़रूरी चीज़ है — मन को बदलना, जिसे हम अक्सर नजरअंदाज़ कर देते हैं।
+             हम इंसान चाँद तक पहुँच गए हैं, लेकिन कभी ये नहीं सोचा कि पेट से कितनी बीमारियाँ शुरू होती हैं।
+             हम चाँद पर बात कर सकते हैं, लेकिन पेट और मन, जो हमारी सेहत की जड़ हैं — उनके बारे में चुप रहते हैं।
+             </p></li>
+            <li><h5>7. Know What Your Body Truly Needs</h5>
+            <p> We rarely try to understand what our bones, heart, or brain need — but awareness of this is life-changing. Life becomes truly joyful when we eat, move, and think in tune with what our body and mind need.<br/>
+             हम शायद ही कभी यह समझते हैं कि शरीर के अलग-अलग हिस्सों को क्या चाहिए — लेकिन यही समझ जीवन बदल सकती है। जब हम अपने शरीर और मन की ज़रूरतों के अनुसार जीते हैं, तभी जीवन में असली आनंद आता है।
+    </p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Call to Action -->
   <section class="py-5 bg-light text-center">
@@ -201,66 +225,57 @@
         Connect with our experts now in just a few clicks.
       </p>
       <div class="d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
-        <a href="tel:+918595076589" class="btn btn-primary">
-          📞 Call Now
-        </a>
-        <a href="https://wa.me/918595076589" target="_blank" class="btn btn-success">
-          💬 WhatsApp Now
-        </a>
+        <a href="tel:+918595076589" class="btn btn-primary">📞 Call Now</a>
+        <a href="https://wa.me/918595076589" target="_blank" class="btn btn-success">💬 WhatsApp Now</a>
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer class="site-footer" data-aos="fade-up">
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>Don't Die With Rishab Bajaj</h3>
-      <p>Sharing knowledge, experience & strategies to help you grow your mind, body, and wealth.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blueprint.html">Blueprint</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Subscribe</a></li>
-      </ul>
-    </div>
-
-   <div class="footer-contact">
-  <h4>Contact</h4>
-  <p>
-    <i class="fa-solid fa-square-envelope" style="font-size: 15px;"></i>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Don't Die With Rishab Bajaj</h3>
+        <p>Sharing knowledge, experience & strategies to help you grow your mind, body, and wealth.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blueprint.html">Blueprint</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+       <h4>Contact</h4>
+      <p>
+    <i class="fa-solid fa-square-envelope" style="color: white; font-size: 15px;"></i>
     <a href="mailto:property.charukhanna@gmail.com" style="color: white; text-decoration: none; font-size: 15px;">
       property.charukhanna@gmail.com
     </a>
-  </p>
-  <p>
+     </p>
+     <i class="fa-brands fa-square-whatsapp" style="color: white; font-size: 15px;"></i>
+    <a href="https://wa.me/918595076589" style="color: white; text-decoration: none; font-size: 15px;">
+     Rishab bajaj
+    </a>
+     </p>
+     <p>
     <i class="fa-brands fa-instagram" style="font-size: 15px;"></i>
     <a href="https://www.instagram.com/rishabbajaj" target="_blank" style="color: white; text-decoration: none; font-size: 15px;">
       @rishabbajaj
     </a>
   </p>
-  <i class="fa-brands fa-square-whatsapp"></i> Rishab Bajaj</i>
-    <a href="https://wa.me/918595076589" target="_blank">
-    </a>
-  </p>
-   <i className="fab fa-linkedin"></i></i>
-    <a href="https://www.linkedin.com/company/RishabBajaj" target="_blank">
-    </a>
-  </p>
 </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Don't Die With Rishab Bajaj. All rights reserved.</p>
+    </div>
+  </footer>
 
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Don't Die With Rishab Bajaj. All rights reserved.</p>
-  </div>
-</footer>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
