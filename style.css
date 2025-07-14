@@ -1,7 +1,13 @@
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
+   padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -55,12 +61,6 @@ body {
   color: white;
 }
 
-.btn-signin {
-  background-color: green;
-  transition: all 0.4s ease-in-out;
-  animation: fadeInBtn 0.8s ease-in-out forwards;
-  opacity: 0;
-}
 
 .btn-subscribe {
   background-color: gold;
@@ -69,6 +69,33 @@ body {
   animation: fadeInBtn 1s ease-in-out forwards;
   opacity: 0;
 }
+
+.btn-signin {
+  background-color: green;
+  transition: all 0.4s ease-in-out;
+  animation: fadeInBtn 0.8s ease-in-out forwards;
+  opacity: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Mobile screens ke liye */
+@media (max-width: 480px) {
+  .btn-signin {
+    font-size: 14px;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-left: 5px;
+
+    .actions .btn {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+}
+
 
 /* Page load animation */
 @keyframes fadeInBtn {
@@ -305,7 +332,7 @@ body {
 }
 
 .our-story h2 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 40px;
   color: #222;
   animation: fadeDown 0.8s ease-in-out;
