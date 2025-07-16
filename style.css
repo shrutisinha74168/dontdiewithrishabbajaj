@@ -616,3 +616,52 @@ form button:hover {
   }
 }
 
+.guarantee-video-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.guarantee-video-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.guarantee-video-section .container {
+  z-index: 2;
+}
+
+.video-control-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.video-control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

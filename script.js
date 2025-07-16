@@ -48,3 +48,17 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
     alert(`Searching for: ${this.value}`);
   }
 });
+
+  function toggleVideo() {
+    const video = document.getElementById("bgVideo");
+    const icon = document.getElementById("videoIcon");
+    if (video.paused) {
+      video.play();
+      icon.classList.remove("fa-play");
+      icon.classList.add("fa-pause");
+    } else {
+      video.pause();
+      icon.classList.remove("fa-pause");
+      icon.classList.add("fa-play");
+    }
+  }
