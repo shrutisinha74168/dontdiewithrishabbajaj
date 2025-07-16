@@ -666,17 +666,22 @@ form button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Already present styles (unchanged for reference)... */
 .modal-overlay {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.65);
   z-index: 9999;
   display: flex;
-  align-items: center;
+  align-items: flex-start;  /* align at top for scroll */
   justify-content: center;
+  padding: 20px 10px; /* Add padding */
+  overflow-y: auto;   /* ✅ Enables vertical scroll */
   backdrop-filter: blur(5px);
 }
+
 
 .new-styled-modal {
   background: rgba(255, 255, 255, 0.05);
@@ -688,7 +693,7 @@ form button:hover {
   position: relative;
   background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
   background-repeat: repeat;
-  box-shadow: 0 0 30px ;
+  box-shadow: 0 0 30px;
 }
 
 .modal-close {
@@ -761,19 +766,72 @@ form button:hover {
   line-height: 1.6;
 }
 
-/* Responsive for mobile */
+/* ✅ Improved Responsive for Tablets and Mobiles */
 @media (max-width: 768px) {
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 20px 10px;
+    overflow-y: auto;
+  }
+
+  .new-styled-modal {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .plan-features-new {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-card-new {
+    flex: 1 1 100%;
+    min-width: unset;
+    padding: 15px;
+  }
+
   .bank-qr-combined-box {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
   }
 
   .qr-left, .bank-right {
     width: 100%;
+    align-items: center;
   }
 
   .qr-img {
     max-width: 120px;
+  }
+
+  .modal-close {
+    font-size: 26px;
+    top: 10px;
+    right: 15px;
+  }
+
+  .modal-box h2 {
+    font-size: 20px;
+  }
+}
+
+/* ✅ Extra Safe for Very Small Screens (< 480px) */
+@media (max-width: 480px) {
+  .feature-card-new {
+    font-size: 14px;
+  }
+
+  .qr-left p, .bank-right p {
+    font-size: 14px;
+  }
+
+  .modal-box h2 {
+    font-size: 18px;
+  }
+
+  .modal-close {
+    font-size: 24px;
   }
 }
