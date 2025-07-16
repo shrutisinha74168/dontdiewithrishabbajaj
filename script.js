@@ -62,3 +62,12 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
       icon.classList.add("fa-play");
     }
   }
+
+  function openPlanModal() {
+    document.getElementById("planModal").style.display = "flex";
+  }
+
+  function closePlanModal() {
+    document.getElementById("planModal").style.display = "none";
+  }
+
