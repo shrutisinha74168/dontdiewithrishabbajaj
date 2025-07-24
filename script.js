@@ -63,11 +63,12 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
     }
   }
 
-  function openPlanModal() {
-    document.getElementById("planModal").style.display = "flex";
+  function openHealthModal() {
+    document.getElementById("healthModal").style.display = "block";
   }
 
-  function closePlanModal() {
-    document.getElementById("planModal").style.display = "none";
+  function closeHealthModal() {
+    document.getElementById("healthModal").style.display = "none";
   }
+
 
