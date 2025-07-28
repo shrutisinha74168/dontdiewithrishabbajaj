@@ -63,6 +63,22 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
     }
   }
 
+  function openPlanModal() {
+    document.getElementById("planModal").style.display = "flex";
+  }
+
+  function closePlanModal() {
+    document.getElementById("planModal").style.display = "none";
+  }
+
+  // Optional: Close when clicking outside the modal box
+  window.onclick = function(event) {
+    const modal = document.getElementById("planModal");
+    if (event.target === modal) {
+      closePlanModal();
+    }
+  };
+
   function openHealthModal() {
     document.getElementById("healthModal").style.display = "block";
   }
@@ -71,4 +87,4 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
     document.getElementById("healthModal").style.display = "none";
   }
 
-
+  
