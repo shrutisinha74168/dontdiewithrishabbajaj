@@ -923,10 +923,16 @@ form button:hover {
       }
     }
 .responsive-img {
-  width: 100%;
-  height: auto;
-  max-height: 750px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* Keeps it visually appealing on desktop */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .responsive-img {
+      max-height: 250px; /* Reduce height on mobile */
+    }
+  }
